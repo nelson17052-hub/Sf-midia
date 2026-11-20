@@ -1,0 +1,170 @@
+<title>Aprovação Sem Filtro</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: uma coluna de blocos de 3 dias; dentro, cards de post em grade (1 col no celular, 3 no desktop) */
+:root{
+  --bg:#F6F4EE; --card:#FFFFFF; --fg:#151412; --muted:#6F6A5F; --line:#E2DED3;
+  --yellow:#F4C531; --ink:#0B0B0B; --ok:#1E7F4F; --ok-bg:#DDF2E6; --warn:#9A5B00; --warn-bg:#FCEBC4; --off:#9B2C2C; --off-bg:#F8DEDA;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E0E0D; --card:#1A1917; --fg:#F2EFE7; --muted:#A39E92; --line:#2E2C28;
+  --ok:#6FD39C; --ok-bg:#16301F; --warn:#F2B84B; --warn-bg:#352812; --off:#F08A80; --off-bg:#3A1A17; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E0E0D; --card:#1A1917; --fg:#F2EFE7; --muted:#A39E92; --line:#2E2C28;
+  --ok:#6FD39C; --ok-bg:#16301F; --warn:#F2B84B; --warn-bg:#352812; --off:#F08A80; --off-bg:#3A1A17; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 60px}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:28px}
+header{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header svg{width:56px;height:56px;flex:none}
+h1{font:600 clamp(26px,5vw,38px)/1.05 var(--display);letter-spacing:-.015em;margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:2px 0 0}
+.tally{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.pill{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:7px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill.ok{background:var(--ok-bg);color:var(--ok);border-color:transparent}
+.pill.warn{background:var(--warn-bg);color:var(--warn);border-color:transparent}
+.pill.off{background:var(--off-bg);color:var(--off);border-color:transparent}
+.help{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;color:var(--muted);font-size:14px}
+.help b{color:var(--fg)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.tab{font:500 13px/1 var(--mono);letter-spacing:.04em;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tab small{display:block;margin-top:5px;color:inherit;opacity:.7;font-size:11px}
+.blockhead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.blockhead h2{font:600 24px/1.1 var(--display);margin:0}
+.btn{font:600 14px/1 var(--body);padding:11px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.btn:focus-visible,.tab:focus-visible,textarea:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.btn.primary{background:var(--yellow);color:#111;border-color:var(--yellow)}
+.btn:disabled{opacity:.5;cursor:default}
+.day{display:grid;gap:12px}
+.day h3{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.post[data-status="aprovado"]{border-color:var(--ok)}
+.post[data-status="mudar"]{border-color:var(--warn)}
+.post[data-status="tirar"]{opacity:.6}
+.post img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--line)}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px 0;font:500 12px/1 var(--mono);letter-spacing:.06em;color:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:6px}
+.chip i{width:10px;height:10px;border-radius:50%;border:1px solid var(--muted);display:inline-block}
+.chip i.k{background:#0B0B0B}.chip i.y{background:#F4C531;border-color:#C79B12}.chip i.w{background:#FAF8F3}
+.cap{padding:10px 14px 0;white-space:pre-wrap;font-size:14px;min-width:0;overflow-wrap:anywhere}
+.req{margin:10px 14px 0;padding:10px 12px;border-radius:10px;background:var(--warn-bg);color:var(--warn);font-size:13px;white-space:pre-wrap}
+.req b{display:block;font:500 11px/1 var(--mono);letter-spacing:.1em;margin-bottom:6px}
+.actions{display:flex;gap:8px;padding:14px;margin-top:auto;flex-wrap:wrap;align-items:center}
+.actions .state{margin-right:auto}
+form.edit{display:grid;gap:8px;padding:12px 14px 0}
+form.edit label{font:500 11px/1 var(--mono);letter-spacing:.1em;color:var(--muted)}
+textarea{width:100%;min-height:96px;font:14px/1.45 var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;resize:vertical}
+.note{font-size:12px;color:var(--muted)}
+.empty{padding:40px 16px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:16px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;z-index:20}
+@media (prefers-reduced-motion:no-preference){.post{transition:border-color .2s,opacity .2s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <svg viewBox="0 0 1000 1000" aria-hidden="true"><defs><clipPath id="mc"><circle cx="500" cy="500" r="500"/></clipPath></defs><g clip-path="url(#mc)"><rect width="1000" height="1000" fill="#F4C531"/><g stroke="#1A1A1A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"><path d="M420 860 v60 h-55" fill="none"/><path d="M580 860 v60 h55" fill="none"/><path d="M300 640 l-70 40 l60 55" fill="none"/><path d="M700 650 Q790 640 820 560" fill="none"/><circle cx="826" cy="548" r="22" fill="#F7EBD3"/><rect x="590" y="270" width="80" height="110" rx="10" fill="#fff"/><path d="M670 295 q40 0 40 30 q0 30 -40 30" fill="none"/><rect x="300" y="470" width="400" height="390" rx="18" fill="#F7EBD3"/><path d="M245 495 L500 245 L755 495 Z" fill="#C8412F"/><rect x="345" y="545" width="125" height="105" rx="16" fill="#fff"/><rect x="530" y="545" width="125" height="105" rx="16" fill="#fff"/><circle cx="440" cy="618" r="20" fill="#1A1A1A" stroke="none"/><circle cx="625" cy="618" r="20" fill="#1A1A1A" stroke="none"/><path d="M345 590 V561 q0 -16 16 -16 h93 q16 0 16 16 V598 Z" fill="#E8D3A8"/><path d="M530 600 V561 q0 -16 16 -16 h93 q16 0 16 16 V590 Z" fill="#E8D3A8"/><path d="M345 512 Q400 490 470 520" fill="none" stroke-width="16"/><path d="M530 530 L655 522" fill="none" stroke-width="16"/><path d="M420 745 Q520 770 600 715" fill="none" stroke-width="15"/><g transform="translate(845 390) rotate(55)"><path d="M-95 -70 q15 -18 32 0 q16 -18 32 0 q16 -18 32 0 q16 -18 32 0 q16 -18 32 0 L45 85 q-45 20 -90 0 Z" fill="#F3E2BE"/><ellipse cx="25" cy="30" rx="26" ry="20" fill="#7A4A26" stroke="none" opacity=".85"/></g></g></g></svg>
+    <div>
+      <h1>Aprovação Sem Filtro</h1>
+      <p class="sub">@imoveissemfiltro · 3 posts por dia · aprovação de 3 em 3 dias</p>
+    </div>
+    <div class="tally" id="tally" aria-live="polite"></div>
+  </header>
+
+  <div class="help">
+    <b>Como funciona:</b> cada bloco cobre 3 dias, com 9 posts. Aprove, peça uma mudança ou tire o post. Para mudar, reescreva a frase e marque entre *asteriscos* a palavra que leva o marca-texto. Os aprovados vão para a programação do Instagram. Os que você pedir para mudar voltam refeitos para aprovar de novo.
+  </div>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Blocos"></nav>
+  <section id="block" aria-live="polite"><div class="empty">Carregando os posts…</div></section>
+</div>
+
+<script>
+const DIAS=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+const fmtDay=iso=>{const [y,m,d]=iso.split('-').map(Number);const dt=new Date(y,m-1,d);return `${DIAS[dt.getDay()]} ${String(d).padStart(2,'0')}/${String(m).padStart(2,'0')}`};
+const STATUS={pendente:['Pendente',''],aprovado:['Aprovado','ok'],mudar:['Mudar','warn'],tirar:['Fora','off']};
+let posts=[], db=null, current=null, editing=null, saving=new Set();
+const NOVAS=['Patrimônio','Referência','Modinha'];
+let pick=null; try{pick=localStorage.getItem('sf-bloco')}catch(e){}
+
+function toast(t){const el=document.createElement('div');el.className='toast';el.textContent=t;document.body.appendChild(el);setTimeout(()=>el.remove(),2200)}
+
+function blocks(){const m=new Map();for(const p of posts){if(!m.has(p.bloco))m.set(p.bloco,[]);m.get(p.bloco).push(p)}return [...m.entries()].sort((a,b)=>a[0]-b[0])}
+
+function defaultBlock(bs){const firstOpen=bs.find(([,ps])=>ps.some(p=>p.status==='pendente'||p.status==='mudar'));return (firstOpen||bs[0]||[null])[0]}
+
+function render(){
+  const bs=blocks();
+  const tally=document.getElementById('tally');
+  const c={pendente:0,aprovado:0,mudar:0,tirar:0};posts.forEach(p=>c[p.status]=(c[p.status]||0)+1);
+  tally.innerHTML='';
+  [['aprovado','ok'],['pendente',''],['mudar','warn'],['tirar','off']].forEach(([k,cls])=>{const s=document.createElement('span');s.className='pill '+cls;s.textContent=`${c[k]||0} ${STATUS[k][0].toLowerCase()}`;tally.appendChild(s)});
+  if(!bs.length){document.getElementById('block').innerHTML='<div class="empty">Nenhum post na fila ainda. Quando o próximo lote estiver pronto, ele aparece aqui.</div>';document.getElementById('tabs').innerHTML='';return}
+  if(current!=='novas'&&(current==null||!bs.some(([b])=>b===current))){current=pick==='novas'?'novas':(pick&&bs.some(([b])=>String(b)===pick))?Number(pick):defaultBlock(bs)}
+  const tabs=document.getElementById('tabs');tabs.innerHTML='';
+  const nv=posts.filter(p=>NOVAS.includes(p.cat));
+  if(nv.length){const t=document.createElement('button');t.className='tab';t.id='tab-novas';t.setAttribute('role','tab');t.setAttribute('aria-selected',String(current==='novas'));const pend=nv.filter(p=>p.status==='pendente'||p.status==='mudar').length;t.innerHTML=`Novas artes<small>${pend} para revisar</small>`;t.onclick=()=>{current='novas';try{localStorage.setItem('sf-bloco','novas')}catch(e){};editing=null;render()};tabs.appendChild(t)}
+  for(const [b,ps] of bs){const t=document.createElement('button');t.className='tab';t.id='tab-'+b;t.setAttribute('role','tab');t.setAttribute('aria-selected',String(b===current));
+    const done=ps.filter(p=>p.status==='aprovado'||p.status==='tirar').length;
+    t.innerHTML=`Bloco ${b}<small>${fmtDay(ps[0].data)} – ${fmtDay(ps[ps.length-1].data)} · ${done}/${ps.length}</small>`;
+    t.onclick=()=>{current=b;try{localStorage.setItem('sf-bloco',String(b))}catch(e){};editing=null;render()};tabs.appendChild(t)}
+  const ps=current==='novas'?nv:bs.find(([b])=>b===current)[1];
+  const sec=document.getElementById('block');sec.innerHTML='';
+  const head=document.createElement('div');head.className='blockhead';
+  const pend=ps.filter(p=>p.status==='pendente');
+  head.innerHTML=current==='novas'?`<h2>Novas artes · ${ps.length} posts</h2>`:`<h2>Bloco ${current} · ${fmtDay(ps[0].data)} a ${fmtDay(ps[ps.length-1].data)}</h2>`;
+  const all=document.createElement('button');all.className='btn primary';all.id='aprovar-bloco';all.textContent=pend.length?`Aprovar os ${pend.length} pendentes`:'Tudo revisado';all.disabled=!pend.length||!db;
+  all.onclick=async()=>{all.disabled=true;for(const p of pend){await save(p,{status:'aprovado'},false)}toast('Bloco aprovado')};
+  head.appendChild(all);sec.appendChild(head);
+  const byDay=new Map();ps.forEach(p=>{if(!byDay.has(p.data))byDay.set(p.data,[]);byDay.get(p.data).push(p)});
+  for(const [d,dps] of byDay){const day=document.createElement('div');day.className='day';day.innerHTML=`<h3>${fmtDay(d)}</h3>`;const g=document.createElement('div');g.className='grid';dps.forEach(p=>g.appendChild(card(p)));day.appendChild(g);sec.appendChild(day)}
+}
+
+function card(p){
+  const el=document.createElement('article');el.className='post';el.dataset.status=p.status;
+  const img=document.createElement('img');img.src=`${p.img}?v=${p.v||1}`;img.alt=p.alt||'';img.loading='lazy';el.appendChild(img);
+  const meta=document.createElement('div');meta.className='meta';
+  meta.innerHTML=`<span>${p.hora} · Nº ${String(p.n).padStart(3,'0')}</span><span class="chip"><i class="${p.tema}"></i>${p.cat}</span>`;el.appendChild(meta);
+  const cap=document.createElement('div');cap.className='cap';cap.textContent=p.legenda;el.appendChild(cap);
+  if(p.status==='mudar'&&(p.nova_frase||p.nova_legenda)){const r=document.createElement('div');r.className='req';r.innerHTML='<b>VOCÊ PEDIU</b>';const t=document.createElement('div');t.textContent=[p.nova_frase&&('Frase: '+p.nova_frase),p.nova_legenda&&('Legenda: '+p.nova_legenda)].filter(Boolean).join('\n\n');r.appendChild(t);el.appendChild(r)}
+  if(editing===p.id){
+    const f=document.createElement('form');f.className='edit';
+    f.innerHTML=`<label for="fr-${p.id}">NOVA FRASE</label><textarea id="fr-${p.id}"></textarea><label for="lg-${p.id}">NOVA LEGENDA</label><textarea id="lg-${p.id}"></textarea><p class="note">Linha em branco separa os blocos de texto. *Asteriscos* marcam o marca-texto.</p>`;
+    f.querySelector('#fr-'+p.id).value=p.nova_frase||p.frase;f.querySelector('#lg-'+p.id).value=p.nova_legenda||p.legenda;
+    f.onsubmit=e=>e.preventDefault();el.appendChild(f);
+    const a=document.createElement('div');a.className='actions';
+    const ok=btn('Salvar pedido','primary',async()=>{const nf=f.querySelector('#fr-'+p.id).value.trim(),nl=f.querySelector('#lg-'+p.id).value.trim();
+      await save(p,{status:'mudar',nova_frase:nf!==p.frase?nf:'',nova_legenda:nl!==p.legenda?nl:''});editing=null;render()});
+    const cancel=btn('Cancelar','',()=>{editing=null;render()});a.append(ok,cancel);el.appendChild(a);return el}
+  const a=document.createElement('div');a.className='actions';
+  const st=document.createElement('span');st.className='pill state '+STATUS[p.status][1];st.textContent=(p.programado&&p.status==='aprovado')?'Programado no Instagram':STATUS[p.status][0];a.appendChild(st);
+  if(p.programado&&p.status==='aprovado'){el.appendChild(a);return el}
+  if(p.status!=='aprovado')a.appendChild(btn('Aprovar','primary',()=>save(p,{status:'aprovado'})));
+  a.appendChild(btn('Mudar','',()=>{editing=p.id;render()}));
+  if(p.status!=='tirar')a.appendChild(btn('Tirar','',()=>save(p,{status:'tirar'})));
+  if(p.status!=='pendente')a.appendChild(btn('Desfazer','',()=>save(p,{status:'pendente',nova_frase:'',nova_legenda:''})));
+  el.appendChild(a);return el;
+}
+function btn(t,cls,fn){const b=document.createElement('button');b.type='button';b.className='btn '+cls;b.textContent=t;b.disabled=!db;b.onclick=fn;return b}
+
+async function save(p,patch,notify=true){
+  if(!db||saving.has(p.id))return;saving.add(p.id);
+  try{await db.doc('posts/'+p.id).update(Object.assign({atualizado:new Date().toISOString()},patch));if(notify)toast(patch.status==='aprovado'?'Aprovado':patch.status==='mudar'?'Pedido de mudança salvo':patch.status==='tirar'?'Post retirado':'Voltou para pendente')}
+  catch(e){toast('Não salvou. Confira a conexão e tente de novo.')}
+  finally{saving.delete(p.id)}
+}
+
+(async()=>{
+  const timer=setTimeout(()=>{if(!posts.length)document.getElementById('block').innerHTML='<div class="empty">Os posts estão demorando para carregar. Abra este link logado na sua conta do Claude.</div>'},10000);
+  try{db=await window.claude?.use?.('db')}catch(e){db=null}
+  if(!db){clearTimeout(timer);document.getElementById('block').innerHTML='<div class="empty">Abra este link logado na sua conta do Claude para ver e aprovar os posts.</div>';return}
+  db.collection('posts').orderBy('seq').onSnapshot(snap=>{clearTimeout(timer);posts=snap.docs.map(d=>Object.assign({id:d.id},d.data()));render()},
+    ()=>{clearTimeout(timer);document.getElementById('block').innerHTML='<div class="empty">Não consegui ler a fila agora. Recarregue a página em instantes.</div>'});
+})();
+</script>

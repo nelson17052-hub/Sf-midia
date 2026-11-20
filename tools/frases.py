@@ -106,3 +106,9 @@ EXTRA3 = [
  ("k", "ANOTA.", ("frase", "O cliente pesquisa imóvel no feriado.\n\nQuem responde no feriado\n*leva a venda*.")),
  ("y", None, ("frase", "Feriado prolongado:\n\nquatro dias de visita.\n*Zero proposta.*")),
 ]
+
+# prints do Nelson (adaptados)
+EXTRA4 = [
+ ("w", None, ("frase", "O influencer diz que imóvel é o pior investimento do Brasil.\n\nGravou o vídeo\n*no apartamento quitado dele*.")),
+ ("k", "SEM FILTRO.", ("frase", "Manda você dolarizar tudo e sair do país.\n\nEle mesmo\n*comprou terreno na praia*.")),
+]

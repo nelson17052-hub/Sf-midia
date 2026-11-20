@@ -85,3 +85,7 @@ L.update({
 66:"Feriado é dia útil pra quem vive de comissão.",
 67:"Mas o cliente adorou o passeio.",
 })
+L.update({
+68:"Faça o que eu digo, não faça o que eu escrituro.",
+69:"Quem espalha o caos geralmente quer te vender alguma coisa.",
+})

@@ -37,3 +37,10 @@ Quem roda: uma tarefa programada do Claude, com o computador do Nelson ligado e 
 - Nunca prometer rentabilidade, nunca citar empreendimento, cliente ou operação real. Perfil anônimo: nunca citar Nelson, Grupo DOMMA ou empresas dele.
 - Legenda: 1 linha ácida + CTA (marca o corretor / manda pro grupo) + `#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro`.
 - No post: Facebook e Threads SEMPRE desligados.
+
+## Notas de 20/11
+- O Chrome do Nelson ("NELSON", Claude no Chrome) também tem o @imoveissemfiltro (troca de conta pelo menu Mais → Trocar de perfil, sem senha)
+  e o IndexedDB `sf` dele já tem as 66 artes + o kit. No Chrome dá para abrir a janelinha send.html com clique da extensão; o Nelson só precisa
+  clicar em "Open the page" no aviso do githack. No Chrome o "Programar" demora: clicar e depois esperar a confirmação em chamadas separadas (limite de 45 s por chamada).
+- O Instagram recusou programar além de ~45 posts na fila ("Não foi possível programar o post"). Programe o que couber e deixe o resto para os dias seguintes,
+  conforme os posts forem saindo.

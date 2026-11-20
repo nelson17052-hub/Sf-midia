@@ -1,5 +1,5 @@
 {
- "batch": "2026-11-20",
+ "batch": "2026-11-20b",
  "items": [
   {
    "n": 1,
@@ -62,6 +62,13 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Domingo, 23h47. “Ainda tá disponível?” Não. Faz quatro meses. Mandei onze mensagens."
   },
   {
+   "n": 47,
+   "file": "n047.jpg",
+   "legenda": "Patrimônio de verdade não depende de senha, de servidor nem do humor do mercado.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: A bolsa cai. O banco quebra. A cripto some. Escritura registrada na gaveta ninguém tira.",
+   "v": 1
+  },
+  {
    "n": 10,
    "file": "n010.jpg",
    "legenda": "Matrícula, ônus, averbação. Se isso parece grego, temos um problema.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
@@ -80,10 +87,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Faz um precinho que eu fecho hoje.” — Não fecho. E o proprietário agora acha que você é fraco."
   },
   {
+   "n": 53,
+   "file": "n053.jpg",
+   "legenda": "Buffett não estava falando de terreno. Mas podia.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Seja medroso quando os outros forem gananciosos, e ganancioso quando os outros tiverem medo.” — WARREN BUFFETT (CARTA AOS ACIONISTAS DA BERKSHIRE, 1986) O terreno bom aparece quando todo mundo está com medo da eleição.",
+   "v": 1
+  },
+  {
    "n": 13,
    "file": "n013.jpg",
    "legenda": "Se fosse salário, caía todo mês.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Comissão não é salário. É indenização."
+  },
+  {
+   "n": 59,
+   "file": "n059.jpg",
+   "legenda": "A IA escreve a legenda. Quem lê a certidão é você.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Corretor especialista em IA: usa o ChatGPT pra escrever “oportunidade imperdível”.",
+   "v": 1
   },
   {
    "n": 14,
@@ -96,6 +117,13 @@
    "file": "n015.jpg",
    "legenda": "Família realizada é a sua, jantando com você.\n\nManda pro grupo da imobiliária.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Posta “mais uma família realizada” toda semana. A própria ele não vê há meses."
+  },
+  {
+   "n": 48,
+   "file": "n048.jpg",
+   "legenda": "Contrato de gaveta não é patrimônio. É esperança.\n\nManda pro grupo da imobiliária.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Escritura sem registro é papel. Quem não registra não é dono.",
+   "v": 1
   },
   {
    "n": 16,
@@ -116,10 +144,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Acorde às 5h.” — O cliente acorda às 11."
   },
   {
+   "n": 54,
+   "file": "n054.jpg",
+   "legenda": "Valor é localização, documentação e potencial construtivo. Preço é só o número.\n\nManda pro grupo da imobiliária.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Preço é o que você paga. Valor é o que você leva.” — WARREN BUFFETT (CARTA AOS ACIONISTAS DA BERKSHIRE, 2008) O cliente que pede desconto nunca perguntou do valor.",
+   "v": 1
+  },
+  {
    "n": 19,
    "file": "n019.jpg",
    "legenda": "Quem tá há 15 anos entendeu tudo.\n\nMarca aquele colega. Ele sabe.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: 1 ano de mercado: “Vou ficar rico.” 5 anos: “Vou ficar.” 15 anos: “Vou.”"
+  },
+  {
+   "n": 60,
+   "file": "n060.jpg",
+   "legenda": "ITBI, laudêmio, averbação. A IA ainda não fez esse curso.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Fez curso de IA no fim de semana. Ainda não sabe calcular o ITBI.",
+   "v": 1
   },
   {
    "n": 20,
@@ -132,6 +174,13 @@
    "file": "n021.jpg",
    "legenda": "Simulação aprovada. No sonho.\n\nMarca o corretor que já viveu isso 👇\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Dinheiro não é problema.” — O problema é não ter."
+  },
+  {
+   "n": 49,
+   "file": "n049.jpg",
+   "legenda": "A poupança não manda notificação avisando que você ficou mais pobre.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Dinheiro parado perde para a inflação. Em silêncio. Todo mês.",
+   "v": 1
   },
   {
    "n": 22,
@@ -152,10 +201,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Ninguém te deve exclusividade. Você deve resultado."
   },
   {
+   "n": 55,
+   "file": "n055.jpg",
+   "legenda": "A maré baixa pra todo mundo. Uns estão de sunga.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Só quando a maré baixa você descobre quem estava nadando pelado.” — WARREN BUFFETT (CARTA AOS ACIONISTAS DA BERKSHIRE, 2001) O juro sobe e aparece quem comprou dez na planta sem caixa pra uma.",
+   "v": 1
+  },
+  {
    "n": 25,
    "file": "n025.jpg",
    "legenda": "VGV de PowerPoint não paga comissão.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Vendi 100 milhões em VGV.” — Na planilha. Do lançamento. Que não saiu."
+  },
+  {
+   "n": 61,
+   "file": "n061.jpg",
+   "legenda": "Engajamento não registra em cartório.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: 40 mil seguidores. Nenhuma escritura.",
+   "v": 1
   },
   {
    "n": 26,
@@ -168,6 +231,13 @@
    "file": "n027.jpg",
    "legenda": "Meta, mensalidade e café ruim. Tudo incluso.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Imobiliária que cobra mensalidade do corretor é coworking com meta."
+  },
+  {
+   "n": 50,
+   "file": "n050.jpg",
+   "legenda": "Mercado travado é ótimo pra quem tem caixa.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Juro alto assusta o comprador. E faz o vendedor aceitar a proposta.",
+   "v": 1
   },
   {
    "n": 28,
@@ -188,10 +258,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Vista mar no alto padrão: abre a janela do banheiro, sobe na privada, inclina 45 graus."
   },
   {
+   "n": 56,
+   "file": "n056.jpg",
+   "legenda": "A pressa é a taxa mais cara do mercado imobiliário.\n\nMarca o corretor que precisa ler isso.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “O dinheiro grande não está em comprar e vender. Está em esperar.” — CHARLIE MUNGER (SÓCIO DE WARREN BUFFETT NA BERKSHIRE) Terreno é para quem sabe esperar. E não precisa vender amanhã.",
+   "v": 1
+  },
+  {
    "n": 31,
    "file": "n031.jpg",
    "legenda": "Quem dá desconto sem ninguém pedir paga a conta.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Desconto oferecido antes do pedido sai de um lugar só: a sua comissão."
+  },
+  {
+   "n": 62,
+   "file": "n062.jpg",
+   "legenda": "A IA vai substituir o corretor que só manda PDF.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “A IA vai substituir o corretor.” — Só o que não sabe ler matrícula.",
+   "v": 1
   },
   {
    "n": 32,
@@ -204,6 +288,13 @@
    "file": "n033.jpg",
    "legenda": "Exclusividade no papel. Concorrência na prática.\n\nMarca aquele colega. Ele sabe.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Exclusividade assinada. — Na OLX. Com a placa do vizinho. E mais três corretores."
+  },
+  {
+   "n": 51,
+   "file": "n051.jpg",
+   "legenda": "Dívida cara transforma crise em liquidação forçada.\n\nManda pro grupo da imobiliária.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Crise não acaba com patrimônio. Acaba com quem estava alavancado.",
+   "v": 1
   },
   {
    "n": 34,
@@ -224,10 +315,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Lead não é cliente. É curioso com WhatsApp."
   },
   {
+   "n": 57,
+   "file": "n057.jpg",
+   "legenda": "Seis palavras que o seu extrato não mostra.\n\nManda pro grupo da imobiliária.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Inflação é imposto sem lei.” — MILTON FRIEDMAN (ECONOMISTA, NOBEL DE 1976) Dinheiro parado paga esse imposto todo mês, sem ver.",
+   "v": 1
+  },
+  {
    "n": 37,
    "file": "n037.jpg",
    "legenda": "Happy hour de corretor é quando o cliente assina.\n\nMarca aquele colega. Ele sabe.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Sexta, 18h. O mundo indo pro happy hour. Você mostrando apê pra quem “só quer conhecer”."
+  },
+  {
+   "n": 63,
+   "file": "n063.jpg",
+   "legenda": "Lindo no reels. Sem metragem no anúncio.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Reels com drone, trilha épica e frase motivacional. A metragem do imóvel? Ninguém sabe.",
+   "v": 1
   },
   {
    "n": 38,
@@ -240,6 +345,13 @@
    "file": "n039.jpg",
    "legenda": "Liberdade financeira em 12x sem juros.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Seja dono do seu tempo.” — Seja dono de um link de checkout."
+  },
+  {
+   "n": 52,
+   "file": "n052.jpg",
+   "legenda": "O medo é o melhor corretor de quem tem dinheiro na mão.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Quem compra na euforia paga o pico. Quem compra no medo escolhe o lote.",
+   "v": 1
   },
   {
    "n": 40,
@@ -260,10 +372,24 @@
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Proposta sem assinatura é conversa. Conversa não paga boleto."
   },
   {
+   "n": 58,
+   "file": "n058.jpg",
+   "legenda": "Autor desconhecido. Verdade conhecida.\n\nSalva e lê de novo amanhã.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Compre terra. Eles não fabricam mais.” — ATRIBUÍDA A MARK TWAIN (NINGUÉM NUNCA ACHOU ONDE ELE DISSE ISSO) Mas também ninguém provou que está errado.",
+   "v": 1
+  },
+  {
    "n": 43,
    "file": "n043.jpg",
    "legenda": "Mas a camiseta é ótima.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
    "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: Imersão de três dias com o maior corretor do Brasil. Voltei com caderno, camiseta e o mesmo cliente que não responde."
+  },
+  {
+   "n": 64,
+   "file": "n064.jpg",
+   "legenda": "Seguidor não assina contrato.\n\nMarca o guru. Ou melhor, não marca. Ele cobra.\n\n#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro",
+   "alt": "Frase do @imoveissemfiltro sobre corretor de imóveis e mercado imobiliário: “Seja especialista em Instagram.” — Seja especialista em fechar.",
+   "v": 1
   },
   {
    "n": 44,

@@ -14,7 +14,8 @@ async function check(){
   if(key===lastKey) return;
   const items=[];
   for(const it of m.items){const b=await fetch('img/'+it.file+'?v='+(it.v||1)+'&b='+m.batch).then(r=>r.blob()); items.push(Object.assign({},it,{blob:b})); S('baixando '+items.length+'/'+m.items.length);}
-  pending={type:'sf',batch:m.batch,key:key,items:items}; lastKey=key; acked=false;
+  let kit=null,specs=null; try{kit=await fetch('kit.json?'+Date.now()).then(r=>r.json()); specs=await fetch('specs.json?'+Date.now()).then(r=>r.json());}catch(e){}
+  pending={type:'sf',batch:m.batch,key:key,items:items,kit:kit,specs:specs}; lastKey=key; acked=false;
  }catch(e){S('erro ao baixar: '+e)}
 }
 function send(){ if(!acked&&pending){ if(window.opener){try{window.opener.postMessage(pending,'https://www.instagram.com')}catch(e){S('erro: '+e)}} else S('sem a janela do Instagram'); } }

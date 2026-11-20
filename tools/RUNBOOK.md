@@ -21,8 +21,8 @@ Quem roda: uma tarefa programada do Claude, com o computador do Nelson ligado e 
 4. Para cada post com `status == mudar`: reescrever a frase/legenda pedida (`nova_frase` / `nova_legenda`), regerar a arte no
    container (tools/), publicar a imagem nova no artifact (mesmo caminho `img/nNNN.jpg`), atualizar o doc (`frase`, `legenda`, `alt`, `v+1`,
    `status: pendente`, limpar `nova_*`) e o spec no repo.
-5. A rotina roda só em dias úteis, às 14h47 (o PC fica ligado à tarde no escritório). Se houver menos de 15 posts futuros ainda não programados
-   (pendentes ou aprovados, o que cobre o fim de semana), criar o próximo bloco de 9 frases novas
+5. A rotina roda só em dias úteis, às 14h47 (o PC fica ligado à tarde no escritório). Manter de 10 a 15 dias de posts na fila (3 por dia): se os posts futuros
+   (pendentes + aprovados não publicados) cobrirem menos de 10 dias, criar blocos de 9 frases novas até cobrir 15 dias
    (regras abaixo), gerar artes, publicar no artifact + banco (`status: pendente`) e avisar o Nelson.
 6. Conferir em instagram.com/scheduled_content/ (`__cards()`) que os posts entraram com legenda.
 7. Avisar o Nelson só quando houver algo para ele: bloco novo para aprovar, ou erro.

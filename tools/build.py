@@ -1,8 +1,9 @@
 import html, re, sys
 sys.path.insert(0, '.')
-from frases import K, Y, W, EXTRA
+from frases import K, Y, W, EXTRA, EXTRA2, MODINHA
 
-CAT = {'k': 'VERDADE CRUA', 'y': 'COMÉDIA', 'w': 'COACH & GURU'}
+CAT = {'k': 'VERDADE CRUA', 'y': 'COMÉDIA', 'w': 'MODINHA', 'p': 'PATRIMÔNIO', 'q': 'REFERÊNCIA'}
+THEME = {'k':'k','y':'y','w':'w','p':'k','q':'k'}
 
 # ordem de postagem: semana = K Y K W Y K Y
 pools = {'k': list(K), 'y': list(Y), 'w': list(W)}
@@ -14,6 +15,7 @@ while any(pools.values()):
     if pools[t]:
         order.append((t,) + pools[t].pop(0))
 order += EXTRA
+order += EXTRA2
 
 def rich(s):
     s = html.escape(s)
@@ -30,12 +32,18 @@ def section(n, t, kicker, item):
     if item[0] == 'frase':
         mx = 82 if max(p.count(chr(10)) for p in item[1].split(chr(10)*2)) >= 2 and n > 44 else 118
         body = f'<div class="body"><div class="fit" data-max="{mx}">{block(item[1], "h")}</div></div>'
+    elif item[0] == 'citacao':
+        _, q, autor, fonte, nota = item
+        body = (f'<div class="body"><div class="fit" data-max="96">'
+                f'{block(q, "h q cit")}'
+                f'<div class="attr">— {html.escape(autor)}<span>{html.escape(fonte)}</span></div>'
+                f'<div class="lab l2">SEM FILTRO</div>{block(nota, "h a")}</div></div>')
     else:
         _, l1, f1, l2, f2 = item
         body = (f'<div class="body"><div class="fit" data-max="104">'
                 f'<div class="lab">{l1}</div>{block(f1, "h q")}'
                 f'<div class="lab l2">{l2}</div>{block(f2, "h a")}</div></div>')
-    return f'<section class="s {t}{" haskick" if kicker else ""}" id="n{n:03d}">{top}{body}{foot}</section>'
+    return f'<section class="s {THEME[t]}{" haskick" if kicker else ""}" id="n{n:03d}">{top}{body}{foot}</section>'
 
 mk = lambda c: ("data:image/svg+xml;utf8," +
   f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'>"
@@ -66,6 +74,9 @@ body{{background:#888}}
 .lab.l2{{margin-top:1.5em}}
 .q{{font-weight:420;font-style:italic}}
 .a{{font-size:.86em}}
+.attr{{font-family:M;font-size:max(.27em,27px);letter-spacing:.12em;color:var(--acc);margin-top:1em;line-height:1.5}}
+.attr span{{display:block;color:var(--dim);font-size:.8em}}
+.cit{{font-size:1.02em}}
 .foot{{color:var(--dim);font-size:23px}}
 .me{{display:flex;align-items:center;gap:16px;color:var(--acc)}}
 .me img{{width:62px;height:62px}}
@@ -91,10 +102,11 @@ def page(items, extra_css=''):
     return out
 
 numbered = [(n + 1,) + o for n, o in enumerate(order)]
+numbered = [(n, 'w', None, MODINHA[n]) if n in MODINHA else (n, t, k, it) for n, t, k, it in numbered]
 html_out = page(numbered)
 # substitui o marca-texto por tema
 html_out = html_out.replace('url("{HL}")', 'var(--mk)')
 html_out = html_out.replace('.k{background', f'.k{{--mk:url("{mk("#F4C531")}")}}.y{{--mk:url("{mk("#121212")}")}}.w{{--mk:url("{mk("#F4C531")}")}}\n.k{{background', 1)
 open('artes.html', 'w').write(html_out)
-open('ordem.txt', 'w').write('\n'.join(f'Nº {n:03d}  {CAT[t]:<13} {(k or ""):<18} {it[1] if it[0]=="frase" else it[2]+" → "+it[4]}'.replace('\n', ' / ') for n, t, k, it in numbered))
+open('ordem.txt', 'w').write('\n'.join(f'Nº {n:03d}  {CAT[t]:<13} {(k or ""):<18} {it[1] if it[0]=="frase" else (it[1]+" — "+it[2]+" ("+it[3]+") / "+it[4] if it[0]=="citacao" else it[2]+" → "+it[4])}'.replace('\n', ' / ') for n, t, k, it in numbered))
 print(len(numbered))

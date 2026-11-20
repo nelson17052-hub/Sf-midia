@@ -49,3 +49,34 @@ CTA = {"k":["Marca o corretor que precisa ler isso.","Manda pro grupo da imobili
        "y":["Marca o corretor que já viveu isso 👇","Marca aquele colega. Ele sabe."],
        "w":["Marca o guru. Ou melhor, não marca. Ele cobra."]}
 TAGS = "#corretordeimoveis #mercadoimobiliario #corretor #imoveis #semfiltro"
+L.update({
+47:"Patrimônio de verdade não depende de senha, de servidor nem do humor do mercado.",
+48:"Contrato de gaveta não é patrimônio. É esperança.",
+49:"A poupança não manda notificação avisando que você ficou mais pobre.",
+50:"Mercado travado é ótimo pra quem tem caixa.",
+51:"Dívida cara transforma crise em liquidação forçada.",
+52:"O medo é o melhor corretor de quem tem dinheiro na mão.",
+53:"Buffett não estava falando de terreno. Mas podia.",
+54:"Valor é localização, documentação e potencial construtivo. Preço é só o número.",
+55:"A maré baixa pra todo mundo. Uns estão de sunga.",
+56:"A pressa é a taxa mais cara do mercado imobiliário.",
+57:"Seis palavras que o seu extrato não mostra.",
+58:"Autor desconhecido. Verdade conhecida.",
+59:"A IA escreve a legenda. Quem lê a certidão é você.",
+60:"ITBI, laudêmio, averbação. A IA ainda não fez esse curso.",
+61:"Engajamento não registra em cartório.",
+62:"A IA vai substituir o corretor que só manda PDF.",
+63:"Lindo no reels. Sem metragem no anúncio.",
+64:"Seguidor não assina contrato.",
+})
+L.update({
+4:"Microfone de 800 reais. Telefone que ninguém atende.",
+11:"Quem ensina a vender e não vende tem outro produto: você.",
+18:"Rotina matinal não aparece no contrato.",
+25:"Número de stories não é número de vendas.",
+32:"Experiência não se compra em módulo.",
+39:"Frase bonita de quadro não paga o mês.",
+43:"Certificado de imersão não abre porta de apartamento.",
+62:"IA é ferramenta. Quem não sabe o que perguntar continua sem resposta.",
+})
+CTA["w"]=["Marca aquele colega especialista em tudo.","Manda pro grupo. Ele sabe quem é."]

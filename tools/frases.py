@@ -60,3 +60,42 @@ EXTRA = [
  ("k", "SEM FILTRO.", ("frase", "Hackeiam o banco.\nHackeiam a Microsoft.\nHackeiam a sua cripto.\n\nTerreno ninguém hackeia.\n*No máximo, invadem.*")),
  ("k", "LEIA COM ATENÇÃO.", ("frase", "Hackeiam o banco.\nHackeiam o Google.\nHackeiam a sua cripto.\n\nImóvel ninguém hackeia.\nSó o cunhado.\n*No inventário.*")),
 ]
+
+# lote 2 (20/11): patrimônio (p, preto), palavra de quem sabe (q, preto, citação), IA & Instagram (w, branco)
+EXTRA2 = [
+ ("p", "LEIA COM ATENÇÃO.", ("frase", "A bolsa cai.\nO banco quebra.\nA cripto some.\n\nEscritura registrada na gaveta\n*ninguém tira*.")),
+ ("p", "ANOTA.", ("frase", "Escritura sem registro é papel.\n\n*Quem não registra não é dono.*")),
+ ("p", "REPITA ISSO.", ("frase", "Dinheiro parado perde para a inflação.\n\n*Em silêncio. Todo mês.*")),
+ ("p", "SEM FILTRO.", ("frase", "Juro alto assusta o comprador.\n\nE faz o vendedor *aceitar a proposta*.")),
+ ("p", "LEIA DE NOVO.", ("frase", "Crise não acaba com patrimônio.\n\nAcaba com *quem estava alavancado*.")),
+ ("p", "PRINTA.", ("frase", "Quem compra na euforia paga o pico.\n\nQuem compra no medo *escolhe o lote*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“Seja medroso quando os outros forem gananciosos, e ganancioso quando os outros tiverem medo.”", "WARREN BUFFETT", "CARTA AOS ACIONISTAS DA BERKSHIRE, 1986", "O terreno bom aparece quando todo mundo está *com medo da eleição*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“Preço é o que você paga. Valor é o que você leva.”", "WARREN BUFFETT", "CARTA AOS ACIONISTAS DA BERKSHIRE, 2008", "O cliente que pede desconto *nunca perguntou do valor*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“Só quando a maré baixa você descobre quem estava nadando pelado.”", "WARREN BUFFETT", "CARTA AOS ACIONISTAS DA BERKSHIRE, 2001", "O juro sobe e aparece quem comprou dez na planta *sem caixa pra uma*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“O dinheiro grande não está em comprar e vender. Está em esperar.”", "CHARLIE MUNGER", "SÓCIO DE WARREN BUFFETT NA BERKSHIRE", "Terreno é para quem sabe esperar. E *não precisa vender amanhã*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“Inflação é imposto sem lei.”", "MILTON FRIEDMAN", "ECONOMISTA, NOBEL DE 1976", "Dinheiro parado paga esse imposto *todo mês, sem ver*.")),
+ ("q", "PALAVRA DE QUEM SABE.", ("citacao", "“Compre terra. Eles não fabricam mais.”", "ATRIBUÍDA A MARK TWAIN", "NINGUÉM NUNCA ACHOU ONDE ELE DISSE ISSO", "Mas também *ninguém provou que está errado*.")),
+ ("w", None, ("frase", "Corretor especialista em IA:\n\nusa o ChatGPT pra escrever\n*“oportunidade imperdível”*.")),
+ ("w", None, ("frase", "Fez curso de IA no fim de semana.\n\nAinda não sabe *calcular o ITBI*.")),
+ ("w", None, ("frase", "40 mil seguidores.\n\n*Nenhuma escritura.*")),
+ ("w", None, ("dialogo", "O GURU DIZ", "“A IA vai substituir o corretor.”", "NA PRÁTICA", "Só o que *não sabe ler matrícula*.")),
+ ("w", None, ("frase", "Reels com drone, trilha épica e frase motivacional.\n\nA metragem do imóvel? *Ninguém sabe.*")),
+ ("w", None, ("dialogo", "O GURU DIZ", "“Seja especialista em Instagram.”", "NA PRÁTICA", "Seja especialista *em fechar*.")),
+]
+
+# 20/11: o branco deixou de ser "guru" e virou MODINHA (tom seco, sem "O GURU DIZ")
+MODINHA = {
+ 4:  ("frase", "Todo corretor tem um podcast.\n\nNenhum tem *uma carteira de clientes*."),
+ 11: ("frase", "Curso de 997 reais pra aprender a vender imóvel.\n\nQuem vende de verdade *não tem tempo de gravar curso*."),
+ 18: ("frase", "Acordar às 5h não fecha negócio.\n\n*Atender às 22h fecha.*"),
+ 25: ("frase", "VGV no stories.\n\n*Escritura em lugar nenhum.*"),
+ 32: ("frase", "Mentoria de corretor com dois anos de mercado.\n\nO mentor *ainda está aprendendo*."),
+ 39: ("frase", "Mentalidade de dono não paga boleto.\n\n*Comissão paga.*"),
+ 43: ("frase", "Imersão, mentoria, masterclass.\n\nO cliente continua *sem responder*."),
+ 59: ("frase", "Corretor especialista em IA:\n\nusa o ChatGPT pra escrever\n*“oportunidade imperdível”*."),
+ 60: ("frase", "Fez curso de IA no fim de semana.\n\nAinda não sabe *calcular o ITBI*."),
+ 61: ("frase", "40 mil seguidores.\n\n*Nenhuma escritura.*"),
+ 62: ("frase", "A IA não vai substituir o corretor.\n\nVai substituir *o que só manda PDF*."),
+ 63: ("frase", "Reels com drone, trilha épica e frase motivacional.\n\nA metragem do imóvel? *Ninguém sabe.*"),
+ 64: ("frase", "Especialista em Instagram não é profissão.\n\n*Fechar negócio é.*"),
+}

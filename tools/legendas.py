@@ -89,3 +89,4 @@ L.update({
 68:"Faça o que eu digo, não faça o que eu escrituro.",
 69:"Quem espalha o caos geralmente quer te vender alguma coisa.",
 })
+L.update({70:"Aluguel por m² é metade da conta. A outra metade é dor de cabeça."})

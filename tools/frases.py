@@ -112,3 +112,6 @@ EXTRA4 = [
  ("w", None, ("frase", "O influencer diz que imóvel é o pior investimento do Brasil.\n\nGravou o vídeo\n*no apartamento quitado dele*.")),
  ("k", "SEM FILTRO.", ("frase", "Manda você dolarizar tudo e sair do país.\n\nEle mesmo\n*comprou terreno na praia*.")),
 ]
+EXTRA4 += [
+ ("p", "FAZ A CONTA.", ("frase", "Galpão: R$ 35 o m².\nKitnet: R$ 133 o m².\n\nO m² que mais rende\né o que *ninguém quer administrar*.")),
+]

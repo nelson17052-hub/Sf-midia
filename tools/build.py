@@ -1,6 +1,6 @@
 import html, re, sys
 sys.path.insert(0, '.')
-from frases import K, Y, W, EXTRA, EXTRA2, MODINHA
+from frases import K, Y, W, EXTRA, EXTRA2, MODINHA, EXTRA3
 
 CAT = {'k': 'VERDADE CRUA', 'y': 'COMÉDIA', 'w': 'MODINHA', 'p': 'PATRIMÔNIO', 'q': 'REFERÊNCIA'}
 THEME = {'k':'k','y':'y','w':'w','p':'k','q':'k'}
@@ -16,6 +16,7 @@ while any(pools.values()):
         order.append((t,) + pools[t].pop(0))
 order += EXTRA
 order += EXTRA2
+order += EXTRA3
 
 def rich(s):
     s = html.escape(s)

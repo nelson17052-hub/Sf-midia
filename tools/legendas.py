@@ -80,3 +80,8 @@ L.update({
 62:"IA é ferramenta. Quem não sabe o que perguntar continua sem resposta.",
 })
 CTA["w"]=["Marca aquele colega especialista em tudo.","Manda pro grupo. Ele sabe quem é."]
+L.update({
+65:"Descanso de corretor é quando o celular descarrega.",
+66:"Feriado é dia útil pra quem vive de comissão.",
+67:"Mas o cliente adorou o passeio.",
+})

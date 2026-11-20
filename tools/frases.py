@@ -99,3 +99,10 @@ MODINHA = {
  63: ("frase", "Reels com drone, trilha épica e frase motivacional.\n\nA metragem do imóvel? *Ninguém sabe.*"),
  64: ("frase", "Especialista em Instagram não é profissão.\n\n*Fechar negócio é.*"),
 }
+
+# 20/11 (feriado): posts para hoje
+EXTRA3 = [
+ ("y", None, ("frase", "Feriado.\n\nTodo mundo descansando.\nO corretor respondendo\n*“ainda tá disponível?”*.")),
+ ("k", "ANOTA.", ("frase", "O cliente pesquisa imóvel no feriado.\n\nQuem responde no feriado\n*leva a venda*.")),
+ ("y", None, ("frase", "Feriado prolongado:\n\nquatro dias de visita.\n*Zero proposta.*")),
+]

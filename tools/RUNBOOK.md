@@ -24,7 +24,8 @@ Quem roda: uma tarefa programada do Claude, com o computador do Nelson ligado e 
 5. A rotina roda só em dias úteis, às 14h47 (o PC fica ligado à tarde no escritório). Manter de 10 a 15 dias de posts na fila (3 por dia): se os posts futuros
    (pendentes + aprovados não publicados) cobrirem menos de 10 dias, criar blocos de 9 frases novas até cobrir 15 dias
    (regras abaixo), gerar artes, publicar no artifact + banco (`status: pendente`) e avisar o Nelson.
-6. Conferir em instagram.com/scheduled_content/ (`__cards()`) que os posts entraram com legenda.
+6. Conferir em instagram.com/scheduled_content/ (`__cards()`) que os posts entraram com legenda. ATENÇÃO: o primeiro post programado
+   de cada sessão às vezes fica sem legenda depois de salvo. Abra o card vazio, rode `__setCaption(item.legenda)` + `__setAlt(item.alt)` e clique em Salvar.
 7. Avisar o Nelson só quando houver algo para ele: bloco novo para aprovar, ou erro.
 
 ## Regras de conteúdo

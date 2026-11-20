@@ -1,15 +1,22 @@
 <!doctype html><meta charset=utf-8><title>sf</title>
 <body style="font:16px system-ui;padding:24px;background:#F4C531">
 <div id=s>carregando…</div>
+<p style="font-size:13px;opacity:.7">Deixe esta janela aberta: ela leva as artes novas para o Instagram sozinha.</p>
 <script>
-(async()=>{
- const S=t=>document.getElementById('s').textContent=t;
- const m=await fetch('manifest.json?'+Date.now()).then(r=>r.json());
- const items=[];
- for(const it of m.items){const b=await fetch('img/'+it.file+'?'+m.batch).then(r=>r.blob()); items.push(Object.assign({},it,{blob:b})); S('baixando '+items.length+'/'+m.items.length);}
- let acked=false;
- addEventListener('message',e=>{if(e.data&&e.data.type==='sf-ack'){acked=true;S('enviado: '+items.length+' artes');setTimeout(()=>close(),1500)}});
- const send=()=>{if(acked)return; if(window.opener){try{window.opener.postMessage({type:'sf',batch:m.batch,items:items},'https://www.instagram.com')}catch(e){S('erro: '+e)}} else S('sem janela de origem'); setTimeout(send,1500)};
- send();
-})();
+const S=t=>document.getElementById('s').textContent=new Date().toLocaleTimeString()+' · '+t;
+let lastKey=null, pending=null, acked=true;
+addEventListener('message',e=>{if(e.data&&e.data.type==='sf-ack'){acked=true;S('enviado: '+(pending?pending.items.length:0)+' artes ('+lastKey+')')}
+ if(e.data&&e.data.type==='sf-resend'){lastKey=null;check()}});
+async function check(){
+ try{
+  const m=await fetch('manifest.json?'+Date.now()).then(r=>r.json());
+  const key=m.batch+':'+m.items.map(i=>i.n+'.'+(i.v||1)).join(',');
+  if(key===lastKey) return;
+  const items=[];
+  for(const it of m.items){const b=await fetch('img/'+it.file+'?v='+(it.v||1)+'&b='+m.batch).then(r=>r.blob()); items.push(Object.assign({},it,{blob:b})); S('baixando '+items.length+'/'+m.items.length);}
+  pending={type:'sf',batch:m.batch,key:key,items:items}; lastKey=key; acked=false;
+ }catch(e){S('erro ao baixar: '+e)}
+}
+function send(){ if(!acked&&pending){ if(window.opener){try{window.opener.postMessage(pending,'https://www.instagram.com')}catch(e){S('erro: '+e)}} else S('sem a janela do Instagram'); } }
+check(); setInterval(send,2000); setInterval(check,180000);
 </script>

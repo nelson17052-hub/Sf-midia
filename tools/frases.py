@@ -115,3 +115,13 @@ EXTRA4 = [
 EXTRA4 += [
  ("p", "FAZ A CONTA.", ("frase", "Galpão: R$ 35 o m².\nKitnet: R$ 133 o m².\n\nO m² que mais rende\né o que *ninguém quer administrar*.")),
 ]
+
+# prints do Nelson, 21/11 (Gopal Ahuja, Ricky Carruth e outros: só a ideia, texto nosso)
+EXTRA5 = [
+ ("p", "FAZ A CONTA.", ("frase", "Pediu R$ 5 mil de aluguel.\nRecusou R$ 4.500.\n\nFicou quatro meses vazio.\n\nPerdeu R$ 18 mil\npor causa de *R$ 500*.")),
+ ("y", None, ("frase", "De carro importado:\npediu desconto.\n\nDe chinelo:\n*pagou à vista*.")),
+ ("k", "REPITA ISSO.", ("frase", "Quem olha pro cliente\ne enxerga a comissão\n\n*perde os dois*.")),
+ ("p", "LEIA COM ATENÇÃO.", ("frase", "Rico fica quieto.\nClasse média posta.\nO resto parcela em 12x\no que a classe média posta.\n\nStatus não é patrimônio.\n*É fantasia.*")),
+ ("y", None, ("dialogo", "O PROPRIETÁRIO DIZ", "“Por menos de 8 mil, prefiro deixar fechado.”", "OITO MESES DEPOIS", "Continua fechado.\n*Pagando condomínio.*")),
+ ("w", None, ("frase", "Duas horas de ligação por dia,\nde segunda a sexta.\n\nO método que mentoria nenhuma vende:\n*ninguém paga pra ouvir isso*.")),
+]

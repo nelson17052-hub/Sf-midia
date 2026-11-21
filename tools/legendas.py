@@ -90,3 +90,11 @@ L.update({
 69:"Quem espalha o caos geralmente quer te vender alguma coisa.",
 })
 L.update({70:"Aluguel por m² é metade da conta. A outra metade é dor de cabeça."})
+L.update({
+71:"Orgulho é o inquilino que nunca paga.",
+72:"Nunca julgue o cliente pelo carro. Às vezes o carro é do banco.",
+73:"Cliente bem atendido volta. E traz a família inteira.",
+74:"Patrimônio de verdade não aparece no feed.",
+75:"Condomínio, IPTU e orgulho. Todo mês, sem falta.",
+76:"Ligar dá trabalho. Por isso funciona.",
+})

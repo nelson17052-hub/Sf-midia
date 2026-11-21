@@ -44,3 +44,8 @@ Quem roda: uma tarefa programada do Claude, com o computador do Nelson ligado e 
   clicar em "Open the page" no aviso do githack. No Chrome o "Programar" demora: clicar e depois esperar a confirmação em chamadas separadas (limite de 45 s por chamada).
 - O Instagram recusou programar além de ~45 posts na fila ("Não foi possível programar o post"). Programe o que couber e deixe o resto para os dias seguintes,
   conforme os posts forem saindo.
+
+## Notas de 21/11
+- Semana de arrancada: de 21/11 a 26/11 são 4 posts por dia. O 4º sai às **16:10** com os Nº 071–076 (aprovados pelo Nelson no chat),
+  um por dia: 071 em 21/11, 072 em 22/11, 073 em 23/11, 074 em 24/11, 075 em 25/11, 076 em 26/11. Depois disso volta a 3 por dia.
+- Por causa do limite de ~45 na fila, programe primeiro os horários mais próximos.
